@@ -22,3 +22,4 @@ logs/
 .idea/
 Thumbs.db
 .DS_Store
+ingestion/.env
