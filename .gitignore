@@ -1,0 +1,24 @@
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Dati persistenti Docker e DB
+data/
+clickhouse-data/
+clickhouse/data/
+kafka-data/
+zookeeper-data/
+grafana-data/
+
+# Log e configurazioni locali
+*.log
+logs/
+.env
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
