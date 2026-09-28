@@ -21,7 +21,7 @@ La pipeline è completamente containerizzata tramite Docker Compose e si articol
 2. **Message Broker (Apache Kafka):** Disaccoppiamento asincrono produttori/consumatori, backpressure handling e garanzia di zero data-loss.
 3. **Inference & Filter Layer (Python Worker):** 
    - **Pre-filtering euristico:** Scarto immediato di stringhe non informatiche senza impattare la GPU.
-   - **Local LLM NER:** Estrazione del software tramite modello locale **Qwen 2.5 Coder 3B Instruct** in esecuzione su **LM Studio**.
+   - **Local LLM NER:** Estrazione del software tramite modello locale **Qwen 2.5 Coder 7B Instruct** in esecuzione su **LM Studio**.
    - **Post-processing deterministico:** Pulizia tramite `BLACKLIST` (aziende tech, hardware, metodologie AI astratte) e `SYNONYM_MAP` per la normalizzazione dei nomi.
 4. **Analytical Storage (ClickHouse):** Database colonnare ottimizzato per serie temporali e aggregazioni su larga scala.
 5. **Visualization (Grafana):** Dashboard analitica in tempo reale con tracciamento temporale, conteggi globali e spike detection.
