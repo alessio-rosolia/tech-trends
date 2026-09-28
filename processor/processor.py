@@ -12,7 +12,7 @@ KAFKA_TOPIC = os.getenv("KAFKA_TOPIC", "raw-tech-stream")
 CLICKHOUSE_HOST = os.getenv("CLICKHOUSE_HOST", "clickhouse")
 CLICKHOUSE_PORT = int(os.getenv("CLICKHOUSE_PORT", 8123))
 LM_STUDIO_URL = os.getenv("LM_STUDIO_URL", "http://host.docker.internal:1234/v1/chat/completions")
-MODEL_NAME = os.getenv("MODEL_NAME", "google/gemma-4-12b")
+MODEL_NAME = os.getenv("MODEL_NAME", "Qwen2.5-7b")
 
 # REGOLE DI NORMALIZZAZIONE E FILTRAGGIO ENTITÀ
 

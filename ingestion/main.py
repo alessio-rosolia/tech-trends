@@ -164,12 +164,18 @@ def fetch_github_and_arxiv():
 # BLUESKY 
 
 TECH_KEYWORDS = [
-    r"\bpython\b", r"\brust\b", r"\bgolang\b", r"\bjavascript\b", r"\btypescript\b",
-    r"\bc\+\+\b", r"\bc#\b", r"\bdocker\b", r"\bkubernetes\b", r"\bk8s\b",
-    r"\blinux\b", r"\bpostgresql\b", r"\bpostgres\b", r"\bclickhouse\b",
-    r"\bkafka\b", r"\bredis\b", r"\bpytorch\b", r"\btensorflow\b",
-    r"\bhuggingface\b", r"\bfastapi\b", r"\blangchain\b", r"\bollama\b",
-    r"\bvllm\b", r"\bnextjs\b", r"\breact\b", r"\bvue\b", r"\bsvelte\b"
+    r"\bgithub\.com\b", r"\bgitlab\b", r"\bhuggingface\.co\b",
+    r"\bopen[\s-]source\b", r"\bself[\s-]hosted\b",
+    r"\brepository\b", r"\brepo\b", r"\bpull request\b",
+    
+    # 3. Concetti architetturali ed ecosistemi
+    r"\bcompiler\b", r"\bruntime\b", r"\bdata\s+pipeline\b",
+    r"\bdistributed\s+systems?\b", r"\bdatabase\b", r"\bolap\b",
+    r"\bllm\b", r"\btransformer(s)?\b", r"\bvector\s+db\b",
+    r"\bbackend\b", r"\bfrontend\b", r"\bapi\b", r"\bsdk\b",
+    
+    r"\bpython\b", r"\brust\b", r"\bgolang\b", r"\btypescript\b",
+    r"\bdocker\b", r"\bkubernetes\b", r"\bclickhouse\b", r"\bpostgres\b"
 ]
 KEYWORD_PATTERN = re.compile("|".join(TECH_KEYWORDS), re.IGNORECASE)
 
@@ -222,6 +228,6 @@ if __name__ == "__main__":
     t_gh_arxiv.start()
     t_bsky.start()
 
-    print("[Ingestion] Tutti i canali di ingestione attivi con filtri tecnici rigorosi.")
+    print("[Ingestion] Tutti i canali di ingestione attivi.")
     while True:
         time.sleep(1)
